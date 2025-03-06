@@ -11,4 +11,5 @@ fetchData("https://dummyjson.com/product")
   })
   .catch((error) => {
     console.log(error);
+    loader.style.display = "none";
   });

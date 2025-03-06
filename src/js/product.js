@@ -6,7 +6,7 @@ import { loader } from "./loader.js";
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get("id");
 
-fetchData("https://dummyjson.com/product")
+fetchData(`https://dummyjson.com/products/${id}`)
   .then((data) => {
     showProduct(data);
     loader.style.display = "none";
