@@ -1,16 +1,17 @@
 import { fetchData } from "./fetchData.js";
-import { showProduct } from "./updateUI.js";
+import { showProduct } from "./showProduct.js";
 import "./dark-mode.js";
+import { loader } from "./loader.js";
 
 const queryString = window.location.search;
-
 const id = new URLSearchParams(queryString).get("id");
-console.log(id);
 
-fetchdata("https://dummyjson.com/product/" + id)
-  .then((product) => {
-    console.log(product);
+fetchData("https://dummyjson.com/product")
+  .then((data) => {
+    showProduct(data);
+    loader.style.display = "none";
   })
   .catch((error) => {
-    console.log(error);
+    console.log("Xatolik yuz berdi:", error);
+    loader.style.display = "none";
   });

@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
+    <div id="loader" class="flex h-32 items-center justify-center">
+      <div
+        class="border-primary h-12 w-12 animate-spin rounded-full border-4 border-dashed"
+      ></div>
+    </div>
+
     <header class="bg-base-200 mb-5">
       <div class="navbar main-container">
         <div class="navbar-start">
@@ -28,10 +34,10 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <button class="btn" id="mode-toggler">
-            <i class="fa-solid fa-moon text-2xl"></i>
+          <button class="btn" link id="mode-toggler">
+            <i href="./card.html" class="fa-solid fa-moon text-2xl"></i>
           </button>
-          <a class="btn btn-ghost" href=""
+          <a class="btn btn-ghost" href="./card.html"
             ><i class="fa-solid fa-cart-shopping text-2xl"></i
           ></a>
         </div>
@@ -80,8 +86,9 @@
                       <i class="fa-solid fa-cart-plus text-xl"></i>
                     </button>
                   </div>
-                </div> </a
-            ></template>
+                </div>
+              </a>
+            </template>
           </div>
         </div>
       </section>
@@ -149,6 +156,7 @@
         </nav>
       </div>
     </footer>
+
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
