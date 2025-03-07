@@ -42,26 +42,4 @@ const showCards = ({ products }) => {
   });
 };
 
-const showProduct = (products) => {
-  products.forEach((product) => {
-    const { title, thumbnail, price, rating, description } = product;
-
-    const img = document.createElement("img");
-    const descriptionEl = document.createElement("p");
-    const ratingEl = document.createElement("span");
-    const priceEl = document.createElement("h3");
-
-    img.src = thumbnail;
-    img.alt = title;
-
-    descriptionEl = description;
-
-    ratingEl = rating;
-
-    priceEl = `$${price}`;
-
-    cardList.append(img, descriptionEl, ratingEl, priceEl);
-  });
-};
-
-export { showCards, showProduct };
+export { showCards };
