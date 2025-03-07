@@ -2,7 +2,7 @@ import "./dark-mode.js";
 
 import { fetchData } from "./fetchData.js";
 import { showCards } from "./updateUI.js";
-import { loader } from "./loader.js";
+import { loader } from "./product.js";
 
 fetchData("https://dummyjson.com/product")
   .then((data) => {
